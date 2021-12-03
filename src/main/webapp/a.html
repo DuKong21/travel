@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="a.css?88">
+    <title>travel</title>
+</head>
+<body>
+ 
+    <div class="head">
+        <a href="#head" class="logo">logo</a>
+        <a href="#!" class="login">로그인</a>
+    </div>
+    <div class="back">
+        <div class="manu">
+            <img class="tkwls" src="./img/dpqj.jpg" alt="dpqj">
+            	<div id="map" ></div>
+            <h1 class="dp">에버랜드</h1>
+                <h4 class="add">경기 용인시 처인구 포곡읍 에버랜드로 199</h4>
+                <p class="tlrks">매일 10:00 - 21:00(홈페이지 참조)</p>
+                <div class="tjs"></div>
+                <div class="tjfaud">
+                    <p>에버랜드는 세계적 규모의 '글로벌 페어'를 비롯해 각종 놀이시설과 공간의 특성에 따라</p>
+                    <p>여러 테마존으로 분류되어 그에 맞는 분위기와 즐거움을 지니고 있다.</p>
+                    <p>1년 내내 색다른 테마로 펼쳐지는 축제를 즐길 수 있는 에버랜드는</p>
+                    <p>남녀노소 모두가 즐길 수 있는 다양한 어트랙션을 보유하고 있으며</p>
+                    <p>그 중 국내 최초 우든코스터 'T 익스프레스'는 젊은이들이 1순위 인기 어트랙션이다.</p>
+                </div>
+                <div class="asd">
+                    <a class="button" href="./sebu.jsp">Back</a>
+                    <a class="button" href="./강원도/강원도.html">다른 여행지 둘러보기</a>
+                </div>
+
+        </div>
+    </div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=78a6dfaa2376dc8b3bb1bb01619d4f5b"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.292547390344154, 127.2035675398288), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+//마커가 표시될 위치입니다 
+var markerPosition  = new kakao.maps.LatLng(37.29255932043525, 127.20342400127271); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+
+// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+// marker.setMap(null);    
+</script>
+</body>
+</html>
